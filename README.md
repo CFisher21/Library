@@ -1,2 +1,2 @@
 # Library
-let's the user add information such as, author, title, total pages, genre and if the user has read the book or not to a library. The user has can then request all the data that is displayed on a table. This uses local storage so it will keep the books when the page is refreshed or closed.
+Allow users to add books to a library by providing details such as the author, title, total pages, genre, and whether they have read the book. The information should be stored in local storage to retain the data even if the page is refreshed or closed. Users can request to view all the book information displayed in a table format.
