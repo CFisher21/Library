@@ -8,16 +8,12 @@ function Book(author, title, pages, genre, read) {
 }
 
 function addBookToLibrary(author, title, pages, genre, read) {
-    // do stuff here    
+     
     const book = new Book(author, title, pages, genre, read)
 
     let data = JSON.parse(localStorage.getItem('myLibrary')) || [];
 
-    console.log("Data before push: ", data)
-
     data.push(book);
-
-    console.log("Data after push: ", data)
 
     localStorage.setItem('myLibrary', JSON.stringify(data));
     
