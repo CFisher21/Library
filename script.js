@@ -10,8 +10,20 @@ function Book(author, title, pages, genre, read) {
 function addMockData() {
   (book1 = new Book("Cody", "The Mountains", "256", "Art & Photography", true)),
     (book2 = new Book("James", "Fastest Racecars", "581", "History", false)),
-    (book3 = new Book("Anthony", "Fly Fishing","1082", "Action & Adventure", true)),
-    (book4 = new Book("Morgan", "The Fairy Princess", "102", "Children", false));
+    (book3 = new Book(
+      "Anthony",
+      "Fly Fishing",
+      "1082",
+      "Action & Adventure",
+      true
+    )),
+    (book4 = new Book(
+      "Morgan",
+      "The Fairy Princess",
+      "102",
+      "Children",
+      false
+    ));
 
   function checkArrayInLocalStorage() {
     // Retrieve array from local storage
@@ -121,4 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   getBooks.addEventListener("click", showBooks);
+
+  const addToLibrary = document.getElementById("addToLibrary");
+  const formElement = document.getElementsByClassName("form")[0];
+
+  addToLibrary.addEventListener("click", () => {
+    formElement.classList.toggle("active");
+  });
 });
