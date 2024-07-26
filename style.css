@@ -1,126 +1,128 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .table {
-    border: 1px solid black;
-    width: auto;
-    padding: 4px;
-    margin: 16px;
-    border-radius: 4px;
+  border: 1px solid black;
+  width: auto;
+  padding: 4px;
+  margin: 16px;
+  border-radius: 4px;
 }
 
 .table-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-th, td {
-    border: 1px solid black;
-    padding: 6px;
+th,
+td {
+  border: 1px solid black;
+  padding: 6px;
 }
 
-thead { 
-    border: 1px solid black;
+thead {
+  border: 1px solid black;
 }
 
 .getBooks {
-    
-    margin: 16px;
+  margin: 16px;
 }
 
-.addBook, .getBooks, .addLibrary {
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #2196F3;
-    color: white;
-    border-radius: 4px;
-    padding: 4px 8px 4px;
+.addBook,
+.getBooks,
+.addLibrary {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px 4px;
 }
-
 
 .addBook {
-    margin: 8px;
+  margin: 8px;
 }
 
-
 .form {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    border: 1px solid black;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 16px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 16px;
 }
 
 form.active {
-    display: flex;
+  display: flex;
 }
 
 .form-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .input-box {
-    width: 70%;
-    margin: 4px;
+  width: 70%;
+  margin: 4px;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 4px;
 }
 
 .readit {
-    margin: 4px;
+  margin: 4px;
 }
 
 .checkbox {
-    height: 2rem;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-    margin: 4px;
+  height: 2rem;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 4px;
 }
 
 .checkbox:checked {
-    background-color: #2196F3;
+  background-color: #2196f3;
 }
 .checkbox:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
-.yes { 
-    margin: 4px
+.yes {
+  margin: 4px;
 }
 
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 64px;
 }
 
-.center { 
-    display: flex;
-    justify-content: center;
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 a {
-    text-decoration: none;
-    color: #2196F3;
-    font-weight: 600;
-    padding: 4px;
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: 600;
+  padding: 4px;
 }
 
 .cody {
-    color: #2196F3;
-    margin: 4px;
+  color: #2196f3;
+  margin: 4px;
 }

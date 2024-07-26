@@ -1,5 +1,6 @@
-function Book(author, title, pages, genre, read) {
+function Book(id, author, title, pages, genre, read) {
   // the constructor
+  this.id = id
   this.author = author;
   this.title = title;
   this.pages = pages;
@@ -8,16 +9,16 @@ function Book(author, title, pages, genre, read) {
 }
 
 function addMockData() {
-  (book1 = new Book("Cody", "The Mountains", "256", "Art & Photography", true)),
-    (book2 = new Book("James", "Fastest Racecars", "581", "History", false)),
-    (book3 = new Book(
+  (book1 = new Book(1 ,"Cody", "The Mountains", "256", "Art & Photography", true)),
+    (book2 = new Book(2, "James", "Fastest Racecars", "581", "History", false)),
+    (book3 = new Book( 3,
       "Anthony",
       "Fly Fishing",
       "1082",
       "Action & Adventure",
       true
     )),
-    (book4 = new Book(
+    (book4 = new Book( 4,
       "Morgan",
       "The Fairy Princess",
       "102",
@@ -47,8 +48,8 @@ addMockData();
 
 function mockBooks() {}
 
-function addBookToLibrary(author, title, pages, genre, read) {
-  const book = new Book(author, title, pages, genre, read);
+function addBookToLibrary(id, author, title, pages, genre, read) {
+  const book = new Book(id, author, title, pages, genre, read);
 
   let data = JSON.parse(localStorage.getItem("myLibrary")) || [];
 
@@ -81,7 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
       read = "No";
     }
 
-    addBookToLibrary(author, title, pages, genre, read);
+    data = getData();
+
+    id = data.length + 1
+
+    addBookToLibrary(id, author, title, pages, genre, read);
 
     bookAdded.innerText = "Book Added";
 

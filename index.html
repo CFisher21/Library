@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="icon" href="library.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="library.svg" />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-</head> 
-<body>
+  </head>
+  <body>
     <div class="table-container">
-        <table id="table" class="table">
-            <thead>
-            <tr>
-                <th>Author</th>
-                <th>Title</th>
-                <th># of Pages</th>
-                <th>Genre</th>
-                <th>Read?</th>
-            </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
+      <table id="table" class="table">
+        <thead>
+          <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th># of Pages</th>
+            <th>Genre</th>
+            <th>Read?</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-        <div class="row">
+      <div class="row">
         <button id="getBooks" class="getBooks">Get Library</button>
-        <button id="addToLibrary" class="addLibrary">Add To Library</button>
+        <button id="addToLibrary" class="addLibrary">New Book</button>
+      </div>
     </div>
-    </div>
-
-
 
     <div class="form-container">
-    <form id="form" class="form">
-
+      <form id="form" class="form">
         <label for="author">Author</label>
-        <input class="input-box" type="text" id="author" required>
+        <input class="input-box" type="text" id="author" required />
 
         <label for="title">Title</label>
-        <input class="input-box" type="text" id="title" required>
+        <input class="input-box" type="text" id="title" required />
 
         <label for="pages">Total Pages</label>
-        <input class="input-box" type="number" id="pages" min="1" required>
+        <input class="input-box" type="number" id="pages" min="1" required />
 
         <label for="genre">Genre</label>
-        <input class="input-box" type="text" list="genres" id="genre" required>
+        <input
+          class="input-box"
+          type="text"
+          list="genres"
+          id="genre"
+          required
+        />
         <datalist id="genres">
-            <option>Action & Adventure</option>
-            <option>Mystery</option>
-            <option>Horror</option>
-            <option>Thriller & Suspense</option>
-            <option>Historical Fiction</option>
-            <option>Romance</option>
-            <option>Graphic Novel</option>
-            <option>Short Story</option>
-            <option>Biography</option>
-            <option>Food & Drink</option>
-            <option>Art & Photography</option>
-            <option>History</option>
-            <option>Travel</option>
-            <option>True Crime</option>
-            <option>Humor</option>
-            <option>Religion & Spirituality</option>
-            <option>Science & Technology</option>
-            <option>Children's</option>
+          <option>Action & Adventure</option>
+          <option>Mystery</option>
+          <option>Horror</option>
+          <option>Thriller & Suspense</option>
+          <option>Historical Fiction</option>
+          <option>Romance</option>
+          <option>Graphic Novel</option>
+          <option>Short Story</option>
+          <option>Biography</option>
+          <option>Food & Drink</option>
+          <option>Art & Photography</option>
+          <option>History</option>
+          <option>Travel</option>
+          <option>True Crime</option>
+          <option>Humor</option>
+          <option>Religion & Spirituality</option>
+          <option>Science & Technology</option>
+          <option>Children's</option>
         </datalist>
 
         <div class="row">
-            <label for="read" class="readit">Have you read it?</label>
-            <input type="checkbox" id="read" class="checkbox">
-            <span class="yes">Yes</span>
+          <label for="read" class="readit">Have you read it?</label>
+          <input type="checkbox" id="read" class="checkbox" />
+          <span class="yes">Yes</span>
         </div>
 
         <span id="bookAdded"></span>
         <button type="submit" class="addBook" id="addBook">Add Book</button>
-        
-    </form>
-</div>
+      </form>
+    </div>
 
-          <footer class="footer">
-            <div class="center">
-                <p class="cody" id="cody-fisher"><b>Cody Fisher © 2024</b></p>
-            </div>
-            <div>
-                <a href="mailto:fishercody23@gmail.com" target="_blank">Email</a>
-                <a href="https://www.linkedin.com/in/fishercody21/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/CFisher21" target="_blank">GitHub</a>
-                <a href="https://github.com/CFisher21/Library" target="_blank">Repository</a>
-                <a href="/terms" target="_blank">Terms</a>
-                <a href="/privacy" target="_blank">Privacy</a>
-            </div>
-          </footer>
-</body>
+    <footer class="footer">
+      <div class="center">
+        <p class="cody" id="cody-fisher"><b>Cody Fisher © 2024</b></p>
+      </div>
+      <div>
+        <a href="mailto:fishercody23@gmail.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/fishercody21/" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/CFisher21" target="_blank">GitHub</a>
+        <a href="https://github.com/CFisher21/Library" target="_blank"
+          >Repository</a
+        >
+      </div>
+    </footer>
+  </body>
 </html>
