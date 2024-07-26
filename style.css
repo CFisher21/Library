@@ -36,7 +36,8 @@ thead {
 .addBook,
 .getBooks,
 .addLibrary {
-  font-size: 16px;
+  font-size: 14px;
+  width: 100px;
   font-weight: 600;
   background-color: #2196f3;
   color: white;
