@@ -55,7 +55,7 @@ thead {
   align-items: center;
   width: 400px;
   border: 1px solid black;
-  padding: 8px;
+  padding: 32px;
   border-radius: 4px;
   margin: 16px;
 }
@@ -126,4 +126,14 @@ a {
 .cody {
   color: #2196f3;
   margin: 4px;
+}
+
+td > button {
+  width: 50px;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 4px;
 }

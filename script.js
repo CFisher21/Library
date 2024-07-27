@@ -9,21 +9,21 @@ function Book(id, author, title, pages, genre, read) {
 }
 
 function addMockData() {
-  (book1 = new Book(1 ,"Cody", "The Mountains", "256", "Art & Photography", true)),
-    (book2 = new Book(2, "James", "Fastest Racecars", "581", "History", false)),
+    (book1 = new Book(1 ,"Cody", "The Mountains", "256", "Art & Photography", 'Yes')),
+    (book2 = new Book(2, "James", "Fastest Racecars", "581", "History", 'No')),
     (book3 = new Book( 3,
       "Anthony",
       "Fly Fishing",
       "1082",
       "Action & Adventure",
-      true
+      'Yes'
     )),
     (book4 = new Book( 4,
       "Morgan",
       "The Fairy Princess",
       "102",
       "Children",
-      false
+      'No'
     ));
 
   function checkArrayInLocalStorage() {
@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     genre = document.getElementById("genre").value;
     checked = document.getElementById("read").checked;
 
-    console.log("checked: ", checked);
     if (checked == true) {
       read = "Yes";
     } else {
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tableBody.innerHTML = "";
 
-    data.forEach((item) => {
+    data.forEach((item, index) => {
       const row = document.createElement("tr");
 
       const authorCell = document.createElement("td");
@@ -130,11 +129,24 @@ document.addEventListener("DOMContentLoaded", () => {
       row.appendChild(genreCell);
 
       const readCell = document.createElement("td");
-      readCell.textContent = item.read;
+      const readButton = document.createElement("button");
+      readButton.textContent = item.read;
+      readButton.addEventListener("click", () => toggleReadStatus(index));
+      readCell.appendChild(readButton);
       row.appendChild(readCell);
 
       tableBody.appendChild(row);
     });
+  }
+
+  function toggleReadStatus(index) {
+    let data = JSON.parse(localStorage.getItem('myLibrary')) || [];
+    if(data[index]) {
+      data[index].read = data[index].read === "Yes" ? "No" : "Yes";
+      localStorage.setItem('myLibrary', JSON.stringify(data))
+      showBooks()
+    }
+    
   }
 
   getBooks.addEventListener("click", showBooks);
