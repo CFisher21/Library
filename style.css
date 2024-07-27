@@ -4,13 +4,17 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
+body {
+  background-color: lightgrey;
+}
 .table {
-  border: 1px solid black;
+  border: 3px solid grey;
   width: auto;
   padding: 4px;
   margin: 16px;
   border-radius: 4px;
+  border-collapse: collapse;
+  background-color: white;
 }
 
 .table-container {
@@ -19,34 +23,36 @@
   flex-direction: column;
 }
 
-th,
-td {
-  border: 1px solid black;
-  padding: 6px;
-}
-
-thead {
-  border: 1px solid black;
-}
-
-.getBooks {
-  margin: 16px;
-}
-
 .addBook,
 .getBooks,
-.addLibrary {
-  font-size: 14px;
-  width: 100px;
+.addLibrary,
+.delete-library {
+  font-size: 18px;
+  width: 140px;
   font-weight: 600;
   background-color: #2196f3;
   color: white;
   border-radius: 4px;
   padding: 4px 8px 4px;
+  border: 2px solid grey;
+  margin: 8px;
+}
+
+
+
+.addLibrary, .getBooks, .delete-library   {
+  text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .addBook {
   margin: 8px;
+  margin-top: 16px;
+  background-color: white;
+  color: black;
 }
 
 .form {
@@ -54,10 +60,11 @@ thead {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  border: 1px solid black;
+  border: 3px solid grey;
   padding: 32px;
   border-radius: 4px;
   margin: 16px;
+  background-color: #2196f3;
 }
 
 form.active {
@@ -67,11 +74,6 @@ form.active {
 .form-container {
   display: flex;
   justify-content: center;
-}
-
-.input-box {
-  width: 70%;
-  margin: 4px;
 }
 
 .row {
@@ -102,6 +104,14 @@ form.active {
 
 .yes {
   margin: 4px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .footer {
@@ -128,7 +138,7 @@ a {
   margin: 4px;
 }
 
-td > button {
+.toggle-read {
   width: 50px;
   background-color: #2196f3;
   color: white;
@@ -136,4 +146,74 @@ td > button {
   font-weight: 600;
   font-size: 20px;
   padding: 4px;
+  border: 2px solid gray;
+}
+
+.delete {
+  width: 80px;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 4px;
+  border: 2px solid gray;
+}
+
+td {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid grey;
+  padding: 6px;
+}
+
+th {
+  font-size: 24px;
+  padding: 8px;
+  color: white;
+  text-shadow: 
+        -1px -1px 0 #555555,  
+         1px -1px 0 #555555,
+        -1px  1px 0 #555555,
+         1px  1px 0 #555555;
+}
+
+thead {
+  background-color: #2196f3;
+  border: 2px solid #555555;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+label {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-shadow: 
+        -1px -1px 0 #555555,  
+         1px -1px 0 #555555,
+        -1px  1px 0 #555555,
+         1px  1px 0 #555555;
+}
+
+.input-box {
+  width: 250px;
+  border: 2px solid grey;
+}
+
+h1 {
+  color: white;
+  text-shadow: 
+        -1px -1px 0 #555555,  
+         1px -1px 0 #555555,
+        -1px  1px 0 #555555,
+         1px  1px 0 #555555;
+         margin-bottom: 16px;
 }

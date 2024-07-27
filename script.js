@@ -9,19 +9,19 @@ function Book(id, author, title, pages, genre, read) {
 }
 
 function addMockData() {
-    (book1 = new Book(1 ,"Cody", "The Mountains", "256", "Art & Photography", 'Yes')),
-    (book2 = new Book(2, "James", "Fastest Racecars", "581", "History", 'No')),
+    (book1 = new Book(1 ,"Harper Lee", "To Kill a Mockingbird", "336", "Thriller", 'No')),
+    (book2 = new Book(2, "F. Scott Fitzgerald", "The Great Gatsby", "581", "Tragedy", 'No')),
     (book3 = new Book( 3,
-      "Anthony",
-      "Fly Fishing",
-      "1082",
-      "Action & Adventure",
-      'Yes'
+      "George R. R. Martin",
+      "A Song of Ice and Fire",
+      "804",
+      "Fantasy",
+      'No'
     )),
     (book4 = new Book( 4,
-      "Morgan",
-      "The Fairy Princess",
-      "102",
+      "Dr. Seuss",
+      "The Lorax",
+      "61",
       "Children",
       'No'
     ));
@@ -131,9 +131,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const readCell = document.createElement("td");
       const readButton = document.createElement("button");
       readButton.textContent = item.read;
+      readButton.classList.add('toggle-read');
       readButton.addEventListener("click", () => toggleReadStatus(index));
       readCell.appendChild(readButton);
       row.appendChild(readCell);
+
+      const deleteCell = document.createElement('td');
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('delete');
+      deleteButton.addEventListener('click', () => {
+        deleteBook(index);
+      })
+      deleteCell.appendChild(deleteButton);
+      row.appendChild(deleteCell);
 
       tableBody.appendChild(row);
     });
@@ -149,6 +160,28 @@ document.addEventListener("DOMContentLoaded", () => {
     
   }
 
+  function deleteBook(index) {
+    let data = JSON.parse(localStorage.getItem('myLibrary')) || [];
+    if (data[index]) {
+        data.splice(index, 1); // Remove the item at the specified index
+        localStorage.setItem('myLibrary', JSON.stringify(data)); // Update local storage
+        showBooks(); // Refresh the display
+    }   
+  }
+
+  const clearLibrary = document.getElementById('delete-library');
+
+  clearLibrary.addEventListener('click', () => {
+    
+    localStorage.clear();
+    
+    alert('Library has been deleted.')
+
+    showBooks();
+  })
+
+  
+
   getBooks.addEventListener("click", showBooks);
 
   const addToLibrary = document.getElementById("addToLibrary");
@@ -157,4 +190,5 @@ document.addEventListener("DOMContentLoaded", () => {
   addToLibrary.addEventListener("click", () => {
     formElement.classList.toggle("active");
   });
+
 });
