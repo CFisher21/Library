@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bookAdded.innerText = "";
     }, 3000);
 
+    showBooks();
     console.log(getData());
   });
 
