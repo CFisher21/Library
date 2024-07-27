@@ -219,6 +219,18 @@ h1 {
          margin-bottom: 16px;
 }
 
+.bookAdded {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  text-shadow: 
+        -1px -1px 0 #555555,  
+         1px -1px 0 #555555,
+        -1px  1px 0 #555555,
+         1px  1px 0 #555555;
+         margin: 8px;
+}
+
 @media(max-width: 600px) {
 
   .table {
