@@ -22,7 +22,7 @@ function addMockData() {
       "Dr. Seuss",
       "The Lorax",
       "61",
-      "Children",
+      "Children's",
       'No'
     ));
 

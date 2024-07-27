@@ -217,3 +217,37 @@ h1 {
          1px  1px 0 #555555;
          margin-bottom: 16px;
 }
+
+@media(max-width: 600px) {
+
+  .table {
+    margin: 12px;
+  }
+  
+  th, td {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .toggle-read, .delete {
+    font-size: 12px;
+  }
+
+  .toggle-read {
+    width: 30px;
+    margin: 4px;
+  }
+
+  .delete {
+    width: 50px;
+    margin: 4px;
+    
+  }
+  
+  .getBooks,
+  .addLibrary,
+  .delete-library {
+    font-size: 14px;
+    width: 110px;
+  }
+}
