@@ -23,6 +23,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 ### Cody Fisher
 
-Email - fishercody23@gmail.com
-LinkedIn - https://www.linkedin.com/in/fishercody21/
-GitHub - https://github.com/CFisher21
+- Email - fishercody23@gmail.com
+- LinkedIn - https://www.linkedin.com/in/fishercody21/
+- GitHub - https://github.com/CFisher21
